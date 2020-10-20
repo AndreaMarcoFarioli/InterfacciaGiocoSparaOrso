@@ -1,0 +1,94 @@
+.root{
+    -fx-background-color: rgba(0,0,0,0);
+
+}
+
+BorderPane{
+    -fx-background-image: url("legno.jpg");
+    -fx-border-radius: 300;
+    -fx-background-radius: 300;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+}
+.Pane{
+    -fx-background-image: url("sfondogiallo.png");
+    -fx-background-size: 100% 100%;
+}
+
+#up{
+    -fx-background-image: url("upy.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: Transparent;
+    -fx-background-repeat:no-repeat;
+    -fx-border: none;
+}
+#up:hover{
+    -fx-background-image: url("upred.png");
+    -fx-scale-x: 1.3;
+    -fx-scale-y: 1.3;
+}
+
+#down{
+    -fx-background-image: url("downy.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: Transparent;
+    -fx-background-repeat:no-repeat;
+    -fx-border: none;
+    
+}
+#down:hover{
+    -fx-background-image: url("downred.png");
+    -fx-scale-x: 1.3;
+    -fx-scale-y: 1.3;
+}
+
+#left{
+    -fx-background-image: url("lefty.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: Transparent;
+    -fx-background-repeat:no-repeat;
+    -fx-border: none;
+}
+#left:hover{
+    -fx-background-image: url("leftred.png");
+    -fx-scale-x: 1.3;
+    -fx-scale-y: 1.3;
+}
+
+#right{
+    -fx-background-image: url("righty.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: Transparent;
+    -fx-background-repeat:no-repeat;
+    -fx-border: none;
+}
+#right:hover{
+    -fx-background-image: url("rightred.png");
+    -fx-scale-x: 1.3;
+    -fx-scale-y: 1.3;
+}
+
+#shoot{
+    -fx-background-image: url("scopey.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: Transparent;
+    -fx-background-repeat:no-repeat;
+    -fx-border: none;
+}
+#shoot:hover{
+    -fx-background-image: url("scoperedbear.png");
+    -fx-scale-x: 1.3;
+    -fx-scale-y: 1.3;
+
+}
+
+#shoot:hover #munizioni{
+    -fx-pref-width: 0;
+    -fx-opacity: 0;
+}
+
+#chiudi{
+    -fx-background-image: url("chiudi.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: Transparent;
+}

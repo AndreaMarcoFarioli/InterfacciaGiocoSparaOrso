@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" stylesheets="@Interfaccia/Fxcss.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="1000.0" prefWidth="1000.0" />
+      <Button fx:id="up" layoutX="250.0" layoutY="778.0" mnemonicParsing="false" onAction="#moveUp" prefHeight="60.0" prefWidth="60.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow height="30.0" radius="14.5" spread="0.15" width="30.0">
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="right" layoutX="310.0" layoutY="838.0" mnemonicParsing="false" onAction="#moveRight" prefHeight="60.0" prefWidth="60.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow height="30.0" radius="14.5" spread="0.15" width="30.0">
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="left" layoutX="190.0" layoutY="838.0" mnemonicParsing="false" onAction="#moveLeft" prefHeight="60.0" prefWidth="60.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow height="30.0" radius="14.5" spread="0.15" width="30.0">
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="down" layoutX="250.0" layoutY="898.0" mnemonicParsing="false" onAction="#moveDown" prefHeight="60.0" prefWidth="60.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow height="30.0" radius="14.5" spread="0.15" width="30.0">
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="shoot" alignment="BOTTOM_RIGHT" layoutX="631.0" layoutY="790.0" mnemonicParsing="false" onAction="#takeShot" prefHeight="154.0" prefWidth="154.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <Label fx:id="munizioni" layoutX="-50.0" prefHeight="60.0" prefWidth="8.0" text="3" textFill="#ffcc00" translateX="-30.0" translateY="-15.0">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.08" />
+               </effect>
+            </Label>
+         </graphic>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="30.0" radius="14.5" spread="0.15" width="30.0">
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <ImageView fitHeight="509.0" fitWidth="807.0" layoutX="-100.0" layoutY="-30.0" pickOnBounds="true" preserveRatio="true" x="190.0" y="-30.0">
+         <image>
+            <Image url="@Interfaccia/logonogun.png" />
+         </image>
+         <effect>
+            <Glow level="0.88">
+               <input>
+                  <DropShadow height="38.79" radius="19.6375" spread="0.13" width="41.76" />
+               </input>
+            </Glow>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="clue" fitHeight="154.0" fitWidth="154.0" layoutX="423.0" layoutY="807.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Interfaccia/noclue.png" />
+         </image>
+         <effect>
+            <DropShadow height="32.86" radius="21.86" spread="0.16" width="56.58" />
+         </effect>
+      </ImageView>
+      <Pane fx:id="container" layoutX="165.0" layoutY="275.0" prefHeight="476.0" prefWidth="656.0" styleClass="Pane">
+         <children>
+            <SplitPane fx:id="taba1" layoutX="4.0" layoutY="3.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="taba2" layoutX="172.0" layoutY="3.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="taba3" layoutX="339.0" layoutY="3.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="taba4" layoutX="503.0" layoutY="3.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabb1" layoutX="4.0" layoutY="123.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabb2" layoutX="172.0" layoutY="123.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabb3" layoutX="339.0" layoutY="123.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabb4" layoutX="503.0" layoutY="123.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabc1" layoutX="4.0" layoutY="243.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabc2" layoutX="172.0" layoutY="243.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabc3" layoutX="339.0" layoutY="243.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabc4" layoutX="503.0" layoutY="243.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabd1" layoutX="4.0" layoutY="361.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabd2" layoutX="172.0" layoutY="361.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabd3" layoutX="339.0" layoutY="361.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabd4" layoutX="503.0" layoutY="361.0" prefHeight="117.5" prefWidth="150.0" />
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="47.44" radius="18.835" spread="0.36" width="29.9" />
+         </effect>
+      </Pane>
+      <Label layoutX="427.0" layoutY="784.0" prefHeight="48.0" prefWidth="150.0" text="INDIZIO" textFill="#ff1c00">
+         <font>
+            <Font name="Wingdings 2" size="39.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Glow level="0.47" />
+               </input>
+            </DropShadow>
+         </effect></Label>
+      <ImageView fx:id="player" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Interfaccia/cacciatore.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#ffcc00" layoutX="280.0" layoutY="868.0" radius="13.0" stroke="BLACK" strokeMiterLimit="5.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <effect>
+            <Glow>
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </effect></Circle>
+      <Button fx:id="chiudi" layoutX="974.0" mnemonicParsing="false" onAction="#closeButton" prefHeight="26.0" prefWidth="26.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
