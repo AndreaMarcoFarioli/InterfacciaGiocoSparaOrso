@@ -109,22 +109,22 @@
       </ImageView>
       <Pane fx:id="container" layoutX="165.0" layoutY="275.0" prefHeight="476.0" prefWidth="656.0" styleClass="Pane">
          <children>
-            <SplitPane fx:id="taba1" layoutX="4.0" layoutY="3.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="taba2" layoutX="172.0" layoutY="3.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="taba3" layoutX="339.0" layoutY="3.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="taba4" layoutX="503.0" layoutY="3.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="tabb1" layoutX="4.0" layoutY="123.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="tabb2" layoutX="172.0" layoutY="123.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="tabb3" layoutX="339.0" layoutY="123.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="tabb4" layoutX="503.0" layoutY="123.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="tabc1" layoutX="4.0" layoutY="243.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="tabc2" layoutX="172.0" layoutY="243.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="tabc3" layoutX="339.0" layoutY="243.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="tabc4" layoutX="503.0" layoutY="243.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="tabd1" layoutX="4.0" layoutY="361.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="tabd2" layoutX="172.0" layoutY="361.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="tabd3" layoutX="339.0" layoutY="361.0" prefHeight="117.5" prefWidth="150.0" />
-            <SplitPane fx:id="tabd4" layoutX="503.0" layoutY="361.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="taba1" layoutX="4.0" layoutY="3.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="taba2" layoutX="172.0" layoutY="3.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="taba3" layoutX="339.0" layoutY="3.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="taba4" layoutX="503.0" layoutY="3.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabb1" layoutX="4.0" layoutY="123.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabb2" layoutX="172.0" layoutY="123.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabb3" layoutX="339.0" layoutY="123.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabb4" layoutX="503.0" layoutY="123.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabc1" layoutX="4.0" layoutY="243.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabc2" layoutX="172.0" layoutY="243.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabc3" layoutX="339.0" layoutY="243.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabc4" layoutX="503.0" layoutY="243.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabd1" layoutX="4.0" layoutY="361.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabd2" layoutX="172.0" layoutY="361.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabd3" layoutX="339.0" layoutY="361.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
+            <SplitPane fx:id="tabd4" layoutX="503.0" layoutY="361.0" opacity="0.0" prefHeight="117.5" prefWidth="150.0" />
          </children>
          <effect>
             <DropShadow blurType="GAUSSIAN" height="47.44" radius="18.835" spread="0.36" width="29.9" />
@@ -141,6 +141,30 @@
                </input>
             </DropShadow>
          </effect></Label>
+      <Label fx:id="win" layoutX="300.0" layoutY="450.0" text="HAI VINTO" textFill="RED" visible="false">
+         <font>
+            <Font size="79.0" />
+         </font>
+         <effect>
+            <DropShadow radius="12.965" width="32.86">
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label fx:id="lose" layoutX="310.0" layoutY="460.0" text="HAI PERSO" textFill="RED" visible="false">
+         <font>
+            <Font size="79.0" />
+         </font>
+         <effect>
+            <DropShadow radius="12.965" width="32.86">
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Label>
       <ImageView fx:id="player" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Interfaccia/cacciatore.png" />
@@ -159,5 +183,29 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Label layoutX="825.0" layoutY="385.0" prefHeight="100.0" prefWidth="180.0" text="Movimenti rimasti:" textAlignment="CENTER" textFill="#fff300" wrapText="true">
+         <font>
+            <Font name="Wingdings 2" size="28.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Glow level="0.47" />
+               </input>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label fx:id="nMoveRem" layoutX="900.0" layoutY="480.0" text="N" textFill="RED">
+         <font>
+            <Font size="45.0" />
+         </font>
+         <effect>
+            <Glow>
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </effect>
+      </Label>
    </children>
 </AnchorPane>

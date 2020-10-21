@@ -22,8 +22,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         try {
             Socket socket = new Socket("62.11.77.202", 5000);
-            EventSocketOriented eventSocketOriented = new EventSocketOriented(new SocketManager(socket, new MiddlewareExtensionBase64()));
+            SocketManager socketManager = new SocketManager(socket, new MiddlewareExtensionBase64());
+            EventSocketOriented eventSocketOriented = new EventSocketOriented(socketManager);
             eventSocketOriented.setContentType(ContentTypes.BASE64);
+            socketManager.on((request, response) -> System.out.println(request));
             eventSocketOriented.emit64("connection");
             eventSocketOriented.on("connected", (request, response) -> {
                 System.out.println(request);
@@ -41,7 +43,7 @@ public class Main extends Application {
             primaryStage.initStyle(StageStyle.TRANSPARENT);
             primaryStage.show();
             System.out.println(primaryStage.getWidth());
-            eventSocketOriented.emit64("randomStartPosition");
+
             eventSocketOriented.start();
         } catch (Exception e) {
             System.out.println(e);

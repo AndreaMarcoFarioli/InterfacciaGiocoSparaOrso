@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -31,6 +32,23 @@ public class Controller {
     public Controller(EventSocketOriented eventSocketOriented){
         try {
             this.eventSocketOriented = eventSocketOriented;
+            this.eventSocketOriented.on("endGame", (request, response) -> {
+                if(request.getBody("win").equals("true")) {
+                    win.setVisible(true);
+                }else{
+                    lose.setVisible(true);
+                }
+                System.out.println("xd");
+            });
+            this.eventSocketOriented.on("connected", (request, response) -> { Platform.runLater(()->{
+                nMoveRem.setText("10");
+                try {
+                    eventSocketOriented.emit64("randomStartPosition");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });});
+
             setEvents();
         } catch (Exception e) {
             e.printStackTrace();
@@ -109,6 +127,16 @@ public class Controller {
 
     @FXML
     private ImageView player;
+
+    @FXML
+    private Label win;
+
+    @FXML
+    private Label lose;
+
+    @FXML
+    private Label nMoveRem;
+
 
     @FXML
     void moveDown(ActionEvent event) {
@@ -201,12 +229,18 @@ public class Controller {
     }
 
     public void didMove(Request request, Response response){
-        String did = request.getBody("did");
-        if(did != null){
-            if(did.equals("true")){
-                setPlayerCell(Integer.parseInt(request.getBody("x")), Integer.parseInt(request.getBody("y")));
+        Platform.runLater(()->{
+            String did = request.getBody("did");
+            if(did != null){
+                if(did.equals("true")){
+                    System.out.println(nMoveRem.getText());
+                    setPlayerCell(Integer.parseInt(request.getBody("x")), Integer.parseInt(request.getBody("y")));
+                    int n = Integer.parseInt(nMoveRem.getText());
+                    n--;
+                    nMoveRem.setText(Integer.toString(n));
+                }
             }
-        }
+        });
     }
 
     public void didShoot(Request request, Response response){
